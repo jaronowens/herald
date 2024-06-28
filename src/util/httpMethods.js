@@ -5,11 +5,9 @@
  * @throws - An error if the fetch request failed
  */
 const getFromAPI = async (endpoint) => {
-    const myHeaders = new Headers();
 
     const requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
+        method: 'GET'
     };
 
     const result = fetch(endpoint, requestOptions)
