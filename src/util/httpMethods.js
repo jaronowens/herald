@@ -17,7 +17,7 @@ const getFromAPI = async (endpoint) => {
             }
         })
         .catch(error => {
-            throw new Error('Failed GET request');
+            throw error;
         });
 
     return result;
