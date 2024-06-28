@@ -8,7 +8,7 @@ const HelloWorld = (props) => {
     useEffect(()=> {
         getFromAPI("/api/helloworld")
             .then((data) => {
-                setGreeting(data);
+                setGreeting(data.greeting);
             })
             .catch(error => {
                 console.log("Something went wrong!");

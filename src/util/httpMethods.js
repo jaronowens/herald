@@ -47,7 +47,7 @@ const postToAPI = async (data, endpoint) => {
             }
         })
         .catch(error => {
-            throw new Error('Failed GET request');
+            throw error;
         });
     return result;
 }
@@ -76,7 +76,7 @@ const updateToAPI = (data, endpoint) => {
             }
         })
         .catch(error => {
-            throw new Error('Failed PUT request');
+            throw error;
         });
     return result;
 }
@@ -102,7 +102,7 @@ const deleteFromAPI = (endpoint) => {
             }
         })
         .catch(error => {
-            throw new Error('Failed DELETE request');
+            throw error;
         });
     return result;
 }
